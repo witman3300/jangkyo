@@ -95,7 +95,7 @@ tr:hover td{background:#fafbfc}
 .dash-hd{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:24px;flex-wrap:wrap;gap:14px}
 .dash-hd h2{font-size:26px;font-weight:800;letter-spacing:-.9px}
 .dash-hd p{color:var(--gray);font-size:14.5px;margin-top:4px}
-.kpi{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px}
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(186px,1fr));gap:16px;margin-bottom:24px}
 .kpi-c{background:#fff;border:1px solid var(--line);border-radius:9px;padding:20px}
 .kpi-c .lb{font-size:13px;color:var(--gray);font-weight:700}
 .kpi-c .vl{font-size:30px;font-weight:800;letter-spacing:-1.2px;margin:6px 0 2px}
@@ -179,6 +179,33 @@ tr:hover td{background:#fafbfc}
 .acct .id{color:var(--gray);font-family:monospace;font-size:12.5px}
 .mclose{position:absolute;top:14px;right:18px;background:none;border:none;color:#fff;font-size:24px;cursor:pointer;line-height:1}
 .modal{position:relative}
+
+/* 재건축 */
+.rb-hd{background:linear-gradient(135deg,#12395f,#1d5183);color:#fff;border-radius:9px;padding:22px 24px;margin-bottom:20px}
+.rb-hd h4{font-size:19px;font-weight:800;margin-bottom:6px}
+.rb-hd p{font-size:14px;color:#bdcfe0}
+.steps{display:flex;gap:0;margin:6px 0 24px;flex-wrap:wrap}
+.step{flex:1;min-width:118px;text-align:center;position:relative;padding-top:30px}
+.step:before{content:"";position:absolute;top:11px;left:0;right:0;height:3px;background:#e3e7ec}
+.step:first-child:before{left:50%}.step:last-child:before{right:50%}
+.step .dot{position:absolute;top:3px;left:50%;transform:translateX(-50%);width:19px;height:19px;border-radius:50%;
+ background:#fff;border:3px solid #dfe5eb;z-index:2}
+.step.done .dot{background:var(--ok);border-color:var(--ok)}
+.step.done:before{background:var(--ok)}
+.step.now .dot{background:var(--point);border-color:var(--point);box-shadow:0 0 0 5px rgba(201,162,39,.22)}
+.step.now:before{background:linear-gradient(90deg,var(--ok) 50%,#e3e7ec 50%)}
+.step h6{font-size:13.5px;font-weight:800;margin-bottom:3px}
+.step span{font-size:11.5px;color:var(--gray);display:block}
+.step.now h6{color:var(--point)}
+.gauge{height:26px;background:#eef1f5;border-radius:99px;overflow:hidden;position:relative;margin:10px 0 8px}
+.gauge .f{height:100%;background:linear-gradient(90deg,var(--accent),#1d5183);border-radius:99px}
+.gauge .mk{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--bad)}
+.gauge .lbl{position:absolute;left:14px;top:0;line-height:26px;font-size:13px;font-weight:800;color:#fff}
+.rb-num{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0}
+.rb-num div{background:#f7f9fb;border:1px solid var(--line);border-radius:8px;padding:16px;text-align:center}
+.rb-num b{display:block;font-size:22px;font-weight:800;letter-spacing:-.8px;color:var(--brand)}
+.rb-num span{font-size:12.5px;color:var(--gray)}
+.warnbox{background:#fdf6f5;border:1px solid #f0c9c4;border-radius:8px;padding:15px 18px;font-size:13px;color:#8b4a42;line-height:1.7}
 
 .view{display:none}.view.on{display:block}
 .hide{display:none !important}
@@ -398,6 +425,8 @@ footer a{cursor:pointer}footer a:hover{color:#e8cf7d}
       <div class="dt" style="color:var(--gray)">총 5건 접수 · 3건 완료</div></div>
     <div class="kpi-c" id="k-vote"><div class="lb">진행중 투표</div><div class="vl">1<span style="font-size:15px">건</span></div>
       <div class="dt"><span class="pill p-bad">마감 3일 전</span></div></div>
+    <div class="kpi-c" id="k-rebuild"><div class="lb">재건축 동의율</div><div class="vl">58.3<span style="font-size:16px">%</span></div>
+      <div class="dt" style="color:var(--gray)">조합설립 필요 75% · 16.7%p 부족</div></div>
   </div>
 
   <div class="grid2">
@@ -419,12 +448,88 @@ footer a{cursor:pointer}footer a:hover{color:#e8cf7d}
         </div>
       </div>
 
+      <!-- 구분소유자 전용: 재건축 -->
+      <div class="panel" id="pnl-rebuild">
+        <div class="ph"><div><h3>재건축 추진 현황</h3><p>구분소유자에게만 공개되는 사업 정보입니다.</p></div>
+          <span class="pill p-blue">구분소유자 전용</span></div>
+
+        <div class="rb-hd">
+          <h4>장교빌딩 재건축 추진준비위원회</h4>
+          <p>2025년 11월 발족 · 현재 <b style="color:#e8cf7d">정밀안전진단 진행</b> 단계입니다.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step done"><div class="dot"></div><h6>준비위 구성</h6><span>2025.11 완료</span></div>
+          <div class="step done"><div class="dot"></div><h6>예비 타당성</h6><span>2026.03 완료</span></div>
+          <div class="step now"><div class="dot"></div><h6>정밀안전진단</h6><span>2026.06 ~ 진행중</span></div>
+          <div class="step"><div class="dot"></div><h6>조합설립 인가</h6><span>동의율 75% 필요</span></div>
+          <div class="step"><div class="dot"></div><h6>사업시행 인가</h6><span>미정</span></div>
+          <div class="step"><div class="dot"></div><h6>착공·준공</h6><span>미정</span></div>
+        </div>
+
+        <h4 style="font-size:16px;font-weight:800;margin:24px 0 4px">조합설립 동의율</h4>
+        <div class="gauge">
+          <div class="f" style="width:58.3%"></div>
+          <div class="mk" style="left:75%"></div>
+          <span class="lbl">58.3%</span>
+        </div>
+        <p style="font-size:12.5px;color:var(--gray)">
+          구분소유자 <b>112명 중 66명</b> 동의 · 의결권 지분 기준 58.3%<br>
+          붉은 선은 조합설립에 필요한 동의율 <b>75%</b>입니다. (집합건물법 및 도시정비법 기준)
+        </p>
+
+        <div class="rb-num">
+          <div><b>1988년</b><span>준공 · 경과 38년</span></div>
+          <div><b>2.14%</b><span>내 의결권 지분</span></div>
+          <div><b>D등급</b><span>예비진단 결과(안전성)</span></div>
+        </div>
+
+        <div class="ph" style="margin:24px 0 12px"><div><h3 style="font-size:16.5px">주요 일정</h3></div></div>
+        <table>
+          <thead><tr><th>일자</th><th>내용</th><th>장소·비고</th><th>상태</th></tr></thead>
+          <tbody>
+            <tr><td>2026.08.14</td><td>정밀안전진단 중간보고회</td><td>지하 1층 대회의실 19:00</td><td><span class="pill p-warn">예정</span></td></tr>
+            <tr><td>2026.09.30</td><td>정밀안전진단 최종 결과 발표</td><td>결과 공지 + 우편 발송</td><td><span class="pill p-gray">예정</span></td></tr>
+            <tr><td>2026.11.20</td><td>조합설립 동의서 1차 마감</td><td>동의율 75% 목표</td><td><span class="pill p-gray">예정</span></td></tr>
+            <tr><td>2026.06.05</td><td>정밀안전진단 용역 계약 체결</td><td>OO구조안전진단㈜</td><td><span class="pill p-ok">완료</span></td></tr>
+            <tr><td>2026.03.22</td><td>예비 타당성 검토 설명회</td><td>참석 74명</td><td><span class="pill p-ok">완료</span></td></tr>
+          </tbody>
+        </table>
+
+        <div class="ph" style="margin:24px 0 12px"><div><h3 style="font-size:16.5px">재건축 자료실</h3>
+          <p>등기부상 구분소유자 본인만 열람·다운로드할 수 있습니다.</p></div></div>
+        <ul class="nt-l">
+          <li><a>예비 타당성 검토 보고서 (요약본)</a><span class="d">PDF · 3.2MB</span></li>
+          <li><a>추진준비위원회 규약</a><span class="d">PDF · 480KB</span></li>
+          <li><a>2026.03 설명회 발표자료</a><span class="d">PDF · 5.1MB</span></li>
+          <li><a>구분소유자 동의서 양식</a><span class="d">HWP · 92KB</span></li>
+          <li><a>추진 경과 회의록 모음 (2025.11~)</a><span class="d">PDF · 1.8MB</span></li>
+        </ul>
+
+        <div class="ph" style="margin:24px 0 12px"><div><h3 style="font-size:16.5px">의견 제출</h3>
+          <p>제출하신 의견은 준비위원회에 전달되며, 익명 처리를 선택할 수 있습니다.</p></div></div>
+        <div class="fld"><label>구분</label>
+          <select><option>재건축 추진 찬반 의견</option><option>분담금·사업성 관련 질의</option>
+            <option>일정·절차 관련 질의</option><option>준비위원회 운영 건의</option><option>기타</option></select></div>
+        <div class="fld"><label>내용</label><textarea rows="3" placeholder="의견을 자유롭게 작성해 주세요"></textarea></div>
+        <label style="font-size:13px;display:flex;gap:7px;align-items:center;margin-bottom:14px">
+          <input type="checkbox" style="width:auto"> 익명으로 제출합니다 (호실·성명 미공개)</label>
+        <button class="btn-s" onclick="alert('의견이 제출되었습니다.\n추진준비위원회에 전달되며, 처리 결과는 자료실 회의록에 반영됩니다.')">의견 제출하기</button>
+
+        <div class="warnbox" style="margin-top:22px">
+          <b>안내</b> — 본 페이지의 수치는 예비 검토 단계의 <b>추정치</b>이며 법적 효력이 없습니다.
+          정밀안전진단 결과 및 조합설립 이후 사업계획에 따라 분담금과 일정은 크게 변동될 수 있습니다.
+          동의서 제출은 신중히 결정하시고, 필요 시 전문가 상담을 받으시기 바랍니다.
+          재건축 관련 문의는 추진준비위원회(관리사무소 경유)로 연락 주세요.
+        </div>
+      </div>
+
       <!-- 임차인에게 보이는 안내 -->
       <div class="panel hide" id="pnl-vote-denied">
         <div class="denied">
           <div class="i">🔒</div>
-          <div><h4>관리단 안건 투표는 구분소유자 전용입니다</h4>
-            <p>집합건물법상 관리단 의결권은 구분소유자에게 있습니다. 임차인은 아래 설문과 건의·민원 기능을 이용해 의견을 전달하실 수 있습니다.<br>
+          <div><h4>관리단 투표 · 재건축 정보는 구분소유자 전용입니다</h4>
+            <p>집합건물법상 관리단 의결권과 재건축 사업 정보 열람권은 구분소유자에게 있습니다. 임차인은 아래 설문과 건의·민원 기능을 이용해 의견을 전달하실 수 있습니다.<br>
             소유자 명의 변경이 필요하시면 관리사무소로 문의해 주세요.</p></div>
         </div>
       </div>
@@ -604,6 +709,20 @@ footer a{cursor:pointer}footer a:hover{color:#e8cf7d}
     </div>
 
     <div class="panel">
+      <div class="ph"><div><h3>재건축 동의 현황 관리</h3><p>구분소유자 112명 · 동의율 58.3%</p></div>
+        <button class="btn-gs">동의서 현황 엑셀</button></div>
+      <div class="gauge"><div class="f" style="width:58.3%"></div><div class="mk" style="left:75%"></div><span class="lbl">58.3%</span></div>
+      <p style="font-size:12.5px;color:var(--gray);margin-bottom:16px">붉은 선 = 조합설립 필요 동의율 75%</p>
+      <div class="hb"><div class="r"><span>동의 완료</span><b>66명 (58.3%)</b></div><div class="t"><div class="f g" style="width:58%"></div></div></div>
+      <div class="hb"><div class="r"><span>검토 중 · 미회신</span><b>31명 (27.7%)</b></div><div class="t"><div class="f o" style="width:28%"></div></div></div>
+      <div class="hb"><div class="r"><span>반대 의사</span><b>9명 (8.0%)</b></div><div class="t"><div class="f" style="width:8%;background:var(--bad)"></div></div></div>
+      <div class="hb"><div class="r"><span>연락 두절 · 주소 불명</span><b>6명 (6.0%)</b></div><div class="t"><div class="f y" style="width:6%"></div></div></div>
+      <p style="font-size:13px;color:var(--gray);margin-top:14px;padding-top:14px;border-top:1px solid var(--line)">
+        <b style="color:var(--warn)">권고</b> — 미회신 31명이 최대 변수입니다. 8월 중간보고회 참석 안내를 우선 발송하세요.
+        <button class="btn-s" style="margin-left:8px" onclick="alert('미회신 구분소유자 31명에게 중간보고회 안내를 발송합니다.')">미회신자 안내 발송</button></p>
+    </div>
+
+    <div class="panel">
       <div class="ph"><div><h3>회원 권한 관리</h3><p>가입 승인 및 권한 부여</p></div>
         <button class="btn-s">신규 승인 대기 3건</button></div>
       <table>
@@ -683,7 +802,7 @@ var state={user:null};
 var NAV={
   guest:[['빌딩소개','pub#intro'],['임대안내','pub#lease'],['입주사 안내','pub#tenants'],['방문객 안내','pub#visit'],['공지·정보','pub#news']],
   tenant:[['입주자마당','mem'],['관리비','mem'],['건의·민원','mem'],['설문','mem'],['시설예약','mem'],['빌딩 홈','pub']],
-  owner:[['입주자마당','mem'],['관리비','mem'],['건의·민원','mem'],['투표·설문','mem'],['자료실','mem'],['빌딩 홈','pub']],
+  owner:[['입주자마당','mem'],['관리비','mem'],['재건축','mem'],['건의·민원','mem'],['투표·설문','mem'],['자료실','mem'],['빌딩 홈','pub']],
   admin:[['대시보드','adm'],['임대·리드','adm'],['관리비','adm'],['민원','adm'],['투표','adm'],['회원관리','adm'],['빌딩 홈','pub']]
 };
 var DOCS={
@@ -784,6 +903,8 @@ function render(){
 
     var isOwner = (u.role==='owner');
     document.getElementById('pnl-vote').classList.toggle('hide',!isOwner);
+    document.getElementById('pnl-rebuild').classList.toggle('hide',!isOwner);
+    document.getElementById('k-rebuild').classList.toggle('hide',!isOwner);
     document.getElementById('pnl-vote-denied').classList.toggle('hide',isOwner);
     document.getElementById('k-vote').classList.toggle('hide',!isOwner);
 
