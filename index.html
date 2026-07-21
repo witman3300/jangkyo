@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>장교빌딩 | 서울 을지로2가 프라임 오피스</title>
+<meta name="description" content="서울특별시 중구 삼일대로 363 장교빌딩. 고용노동부·서울고용노동청 소재. 사무실 임대, 입주사 안내, 관리단 정보.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+ --brand:#12395f;--brand2:#1d5183;--accent:#0a84c4;--point:#c9a227;
+ --ink:#1a222c;--gray:#68737f;--line:#e3e7ec;--bg:#f5f7f9;--white:#fff;
+ --ok:#1c7a45;--warn:#c9770a;--bad:#c0392b;
+}
+body{font-family:'Malgun Gothic','맑은 고딕',-apple-system,'Apple SD Gothic Neo',sans-serif;color:var(--ink);line-height:1.62;background:var(--white)}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.sec{padding:74px 0}
+.sec-t{margin-bottom:40px}
+.sec-t .eb{color:var(--accent);font-size:13px;font-weight:800;letter-spacing:2px}
+.sec-t h2{font-size:31px;font-weight:800;letter-spacing:-1.1px;margin-top:8px}
+.sec-t p{color:var(--gray);margin-top:10px}
+.center{text-align:center}
+.btn{display:inline-block;padding:13px 26px;border-radius:5px;font-weight:700;font-size:15px;cursor:pointer;border:none;transition:.18s;font-family:inherit}
+.btn-b{background:var(--brand);color:#fff}.btn-b:hover{background:var(--brand2)}
+.btn-p{background:var(--point);color:#2b2107}
+.btn-o{border:1.5px solid rgba(255,255,255,.6);color:#fff;background:transparent}
+.btn-s{padding:7px 14px;font-size:13px;border-radius:4px;background:var(--brand);color:#fff;border:none;cursor:pointer;font-family:inherit;font-weight:700}
+.btn-gs{padding:7px 14px;font-size:13px;border-radius:4px;background:#eef1f5;color:#41505f;border:1px solid var(--line);cursor:pointer;font-family:inherit;font-weight:700}
+
+/* 헤더 */
+.topbar{background:var(--brand);color:#b7c9db;font-size:13px}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;min-height:36px;gap:12px;flex-wrap:wrap}
+.topbar a{margin-left:16px;cursor:pointer}.topbar a:hover{color:#fff}
+header{position:sticky;top:0;z-index:90;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+.logo{font-size:22px;font-weight:800;color:var(--brand);letter-spacing:-1px;cursor:pointer}
+.logo small{display:block;font-size:9.5px;letter-spacing:1.6px;color:var(--point);font-weight:700}
+nav ul{display:flex;list-style:none;gap:28px;font-weight:700;font-size:15.5px}
+nav a{cursor:pointer}nav a:hover{color:var(--accent)}
+.hd-r{display:flex;align-items:center;gap:10px}
+.usr{font-size:13.5px;color:var(--gray);text-align:right;line-height:1.35}
+.usr b{display:block;color:var(--ink);font-size:14.5px}
+
+/* HERO */
+.hero{background:linear-gradient(rgba(9,28,48,.82),rgba(9,28,48,.9)),repeating-linear-gradient(180deg,#17415f 0 30px,#123449 30px 60px);color:#fff;padding:88px 0}
+.hero .bd{display:inline-block;background:rgba(201,162,39,.16);border:1px solid rgba(201,162,39,.5);color:#e8cf7d;padding:6px 15px;border-radius:99px;font-size:13px;font-weight:700;margin-bottom:20px}
+.hero h1{font-size:45px;font-weight:800;line-height:1.3;letter-spacing:-1.7px}
+.hero h1 em{font-style:normal;color:#e8cf7d}
+.hero p{margin:20px 0 30px;font-size:17.5px;color:#c5d3e1;line-height:1.75}
+.hero .bs{display:flex;gap:11px;flex-wrap:wrap}
+.spec{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(255,255,255,.15);margin-top:54px;border-radius:7px;overflow:hidden}
+.spec div{background:#0f2f47;padding:20px 12px;text-align:center}
+.spec b{display:block;font-size:24px;color:#e8cf7d;font-weight:800}
+.spec span{font-size:12.5px;color:#9fb3c6}
+
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.card{background:#fff;border:1px solid var(--line);border-radius:9px;padding:26px 22px;transition:.2s}
+.card:hover{box-shadow:0 12px 26px rgba(18,57,95,.09);border-color:var(--accent)}
+.card .ic{width:42px;height:42px;border-radius:9px;background:var(--brand);color:#e8cf7d;display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:14px}
+.card h4{font-size:17px;font-weight:800;margin-bottom:7px}
+.card p{font-size:14.3px;color:var(--gray)}
+
+table{width:100%;border-collapse:collapse;font-size:14.5px;background:#fff}
+th{background:#eef2f6;color:#33414f;font-weight:800;font-size:13.5px;padding:13px 12px;text-align:left;border-bottom:2px solid #d7dee6}
+td{padding:13px 12px;border-bottom:1px solid var(--line)}
+tr:hover td{background:#fafbfc}
+.pill{display:inline-block;padding:3px 11px;border-radius:99px;font-size:12px;font-weight:800}
+.p-ok{background:#e6f4ec;color:var(--ok)}
+.p-warn{background:#fdf2e2;color:var(--warn)}
+.p-bad{background:#fdeceb;color:var(--bad)}
+.p-gray{background:#eef1f5;color:#5a6875}
+.p-blue{background:#e7f2fb;color:var(--accent)}
+
+.dir{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.dir-i{border:1px solid var(--line);border-radius:8px;padding:18px 20px;background:#fff;display:flex;gap:14px;align-items:center}
+.dir-i .fl{width:52px;height:52px;border-radius:8px;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#e8cf7d;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;flex-shrink:0}
+.dir-i h5{font-size:15.5px;font-weight:800}
+.dir-i span{font-size:13px;color:var(--gray)}
+
+.notice{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.nt-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;padding-bottom:12px;border-bottom:2px solid var(--brand)}
+.nt-h h3{font-size:19px;font-weight:800}
+.nt-h a{font-size:13px;color:var(--gray)}
+.nt-l{list-style:none}
+.nt-l li{display:flex;justify-content:space-between;gap:14px;padding:12px 0;border-bottom:1px solid var(--line);font-size:15px}
+.nt-l li a{cursor:pointer}.nt-l li a:hover{color:var(--accent)}
+.nt-l .d{color:#9aa5b1;font-size:13px;flex-shrink:0}
+.lock{font-size:12px;color:var(--point);font-weight:800;margin-left:6px}
+
+/* 대시보드 */
+.dash{background:var(--bg);min-height:80vh;padding:34px 0 70px}
+.dash-hd{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:24px;flex-wrap:wrap;gap:14px}
+.dash-hd h2{font-size:26px;font-weight:800;letter-spacing:-.9px}
+.dash-hd p{color:var(--gray);font-size:14.5px;margin-top:4px}
+.kpi{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px}
+.kpi-c{background:#fff;border:1px solid var(--line);border-radius:9px;padding:20px}
+.kpi-c .lb{font-size:13px;color:var(--gray);font-weight:700}
+.kpi-c .vl{font-size:30px;font-weight:800;letter-spacing:-1.2px;margin:6px 0 2px}
+.kpi-c .dt{font-size:12.5px;font-weight:700}
+.up{color:var(--ok)}.down{color:var(--bad)}
+.panel{background:#fff;border:1px solid var(--line);border-radius:9px;padding:24px;margin-bottom:18px}
+.panel h3{font-size:17.5px;font-weight:800;margin-bottom:4px}
+.panel .ph{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;gap:12px;flex-wrap:wrap}
+.panel .ph p{font-size:13.5px;color:var(--gray)}
+
+.bars{display:flex;align-items:flex-end;gap:14px;height:190px;padding:10px 0 0}
+.bar-w{flex:1;display:flex;flex-direction:column;align-items:center;gap:8px;height:100%;justify-content:flex-end}
+.bar{width:100%;max-width:54px;background:linear-gradient(180deg,var(--accent),#1d5183);border-radius:4px 4px 0 0;position:relative;min-height:4px}
+.bar span{position:absolute;top:-21px;left:50%;transform:translateX(-50%);font-size:12px;font-weight:800;color:var(--brand);white-space:nowrap}
+.bar-w .xl{font-size:12.5px;color:var(--gray);font-weight:700}
+.hb{margin-bottom:14px}
+.hb .r{display:flex;justify-content:space-between;font-size:13.5px;margin-bottom:5px}
+.hb .r b{font-weight:800}
+.hb .t{height:9px;background:#eef1f5;border-radius:99px;overflow:hidden}
+.hb .f{height:100%;border-radius:99px;background:var(--accent)}
+.hb .f.g{background:var(--ok)}.hb .f.o{background:var(--warn)}.hb .f.y{background:var(--point)}
+
+.donut-wrap{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.donut{width:150px;height:150px;border-radius:50%;flex-shrink:0;
+ background:conic-gradient(var(--accent) 0 74%, var(--point) 74% 88%, #dfe5eb 88% 100%);
+ display:flex;align-items:center;justify-content:center;position:relative}
+.donut:after{content:"";position:absolute;width:98px;height:98px;background:#fff;border-radius:50%}
+.donut .ct{position:relative;z-index:2;text-align:center}
+.donut .ct b{display:block;font-size:26px;font-weight:800;letter-spacing:-1px}
+.donut .ct span{font-size:11.5px;color:var(--gray)}
+.lg{list-style:none;font-size:14px}
+.lg li{padding:5px 0;display:flex;align-items:center;gap:9px}
+.lg i{width:11px;height:11px;border-radius:3px;display:inline-block}
+
+.vote{border:1px solid var(--line);border-radius:9px;padding:22px;margin-bottom:14px;background:#fff}
+.vote .vh{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:6px}
+.vote h4{font-size:17px;font-weight:800}
+.vote .meta{font-size:13px;color:var(--gray);margin-bottom:16px}
+.vopt{display:flex;gap:10px;margin-bottom:9px;align-items:center}
+.vopt button{flex-shrink:0;width:86px}
+.vopt .t{flex:1;height:26px;background:#eef1f5;border-radius:5px;position:relative;overflow:hidden}
+.vopt .f{height:100%;background:#d6e8f6}
+.vopt .lbl{position:absolute;left:11px;top:0;line-height:26px;font-size:13.5px;font-weight:700}
+.vopt .pct{position:absolute;right:11px;top:0;line-height:26px;font-size:13px;font-weight:800;color:var(--brand)}
+
+.tabs{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap}
+.tab{padding:8px 17px;border-radius:99px;border:1px solid var(--line);background:#fff;font-size:13.5px;font-weight:700;cursor:pointer;font-family:inherit}
+.tab.on{background:var(--brand);color:#fff;border-color:var(--brand)}
+
+.fld{margin-bottom:14px}
+.fld label{display:block;font-size:13px;font-weight:800;margin-bottom:6px}
+.fld input,.fld select,.fld textarea{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:5px;font-size:14.5px;font-family:inherit;background:#fbfcfd}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--accent);background:#fff}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+.gate{background:linear-gradient(135deg,#12395f,#1d5183);color:#fff;border-radius:11px;padding:30px 32px;display:flex;justify-content:space-between;align-items:center;gap:22px;flex-wrap:wrap}
+.gate h3{font-size:21px;font-weight:800;margin-bottom:6px}
+.gate p{color:#bdcfe0;font-size:14.5px}
+
+/* 권한 안내 박스 */
+.denied{background:#fff8ea;border:1px solid #f0dcae;border-radius:9px;padding:22px 24px;display:flex;gap:16px;align-items:flex-start}
+.denied .i{width:34px;height:34px;border-radius:50%;background:var(--point);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;flex-shrink:0}
+.denied h4{font-size:16px;font-weight:800;margin-bottom:5px}
+.denied p{font-size:14px;color:#7a6a45}
+
+/* 로그인 모달 */
+.mask{display:none;position:fixed;inset:0;background:rgba(10,22,36,.62);z-index:500;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(3px)}
+.mask.on{display:flex}
+.modal{background:#fff;border-radius:13px;width:100%;max-width:430px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.3)}
+.modal .mh{background:var(--brand);color:#fff;padding:26px 30px}
+.modal .mh h3{font-size:21px;font-weight:800;letter-spacing:-.6px}
+.modal .mh p{font-size:13.5px;color:#b7c9db;margin-top:4px}
+.modal .mb{padding:26px 30px 30px}
+.err{display:none;background:#fdeceb;border:1px solid #f2c3be;color:var(--bad);padding:11px 14px;border-radius:6px;font-size:13.5px;font-weight:700;margin-bottom:14px}
+.err.on{display:block}
+.accts{margin-top:20px;padding-top:18px;border-top:1px dashed var(--line)}
+.accts .t{font-size:12px;font-weight:800;color:var(--gray);letter-spacing:.5px;margin-bottom:9px}
+.acct{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 12px;border:1px solid var(--line);border-radius:6px;margin-bottom:7px;font-size:13px;cursor:pointer;background:#fbfcfd}
+.acct:hover{border-color:var(--accent);background:#f4faff}
+.acct b{font-weight:800}
+.acct .id{color:var(--gray);font-family:monospace;font-size:12.5px}
+.mclose{position:absolute;top:14px;right:18px;background:none;border:none;color:#fff;font-size:24px;cursor:pointer;line-height:1}
+.modal{position:relative}
+
+.view{display:none}.view.on{display:block}
+.hide{display:none !important}
+
+footer{background:#0d2136;color:#8ba0b5;font-size:13.5px;padding:46px 0 30px}
+.f-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:30px;padding-bottom:26px;border-bottom:1px solid rgba(255,255,255,.1)}
+footer h5{color:#fff;font-size:14.5px;font-weight:800;margin-bottom:12px}
+footer ul{list-style:none}footer li{padding:3.5px 0}
+footer a{cursor:pointer}footer a:hover{color:#e8cf7d}
+.f-bot{padding-top:20px;font-size:12.5px;color:#6b8098;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+@media(max-width:980px){
+ nav{display:none}
+ .hero h1{font-size:31px}
+ .spec{grid-template-columns:repeat(2,1fr)}
+ .grid4,.grid3,.grid2,.dir,.notice,.kpi,.two,.f-top{grid-template-columns:1fr}
+ .sec{padding:50px 0}.sec-t h2{font-size:24px}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= 상단 공통 ================= -->
+<div class="topbar">
+  <div class="wrap">
+    <span id="tb-left">장교공영주식회사 · 장교빌딩 관리단</span>
+    <span id="tb-right">
+      <a onclick="go('pub')">홈</a>
+      <a>사이트맵</a>
+      <a onclick="openLogin()">로그인</a>
+      <a>회원가입</a>
+    </span>
+  </div>
+</div>
+
+<header>
+  <div class="wrap">
+    <a class="logo" onclick="go(state.user? (state.user.role==='admin'?'adm':'mem') : 'pub')">
+      장교빌딩<small id="logo-sub">JANGKYO BUILDING</small></a>
+    <nav><ul id="mainnav"></ul></nav>
+    <div class="hd-r" id="hd-r"></div>
+  </div>
+</header>
+
+<!-- ================= ① 공개(비로그인 포함 전체 공개) ================= -->
+<div class="view on" id="v-pub">
+
+<section class="hero">
+  <div class="wrap">
+    <span class="bd">고용노동부 · 서울지방고용노동청 소재</span>
+    <h1>서울 을지로2가,<br><em>행정과 비즈니스가 만나는</em> 자리.</h1>
+    <p>명동·시청·종로가 도보권인 도심 프라임 오피스.<br>준공 이후 서울 중심업무지구를 지켜온 장교빌딩입니다.</p>
+    <div class="bs">
+      <a class="btn btn-p" onclick="scrollTo2('lease')">공실 현황 보기</a>
+      <a class="btn btn-o" onclick="scrollTo2('visit')">찾아오시는 길</a>
+    </div>
+    <div class="spec">
+      <div><b>을지로2가</b><span>서울 중구 삼일대로 363</span></div>
+      <div><b>2·5호선</b><span>을지로4가역 도보 3분</span></div>
+      <div><b>지하 O층</b><span>지상 OO층 규모</span></div>
+      <div><b>OOO대</b><span>부설 주차 가능</span></div>
+      <div><b>24H</b><span>상주 방재·보안 관리</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="intro">
+  <div class="wrap">
+    <div class="sec-t center"><div class="eb">WHY JANGKYO</div>
+      <h2>주소가 곧 신뢰가 되는 건물</h2>
+      <p>단순한 임대 공간이 아니라, 입주 기업의 대외 신뢰도를 함께 올리는 자산입니다.</p></div>
+    <div class="grid4">
+      <div class="card"><div class="ic">01</div><h4>노동·노무 행정 중심</h4>
+        <p>고용노동부와 서울지방고용노동청이 같은 건물에 있습니다. 노무법인·법무·인사 컨설팅 업종에 압도적인 업무 효율을 제공합니다.</p></div>
+      <div class="card"><div class="ic">02</div><h4>CBD 최중심 입지</h4>
+        <p>을지로·명동·시청·종로 도심 업무지구의 정중앙. 관공서·금융기관·주요 대기업 본사와 도보 이동이 가능합니다.</p></div>
+      <div class="card"><div class="ic">03</div><h4>안정적인 관리 체계</h4>
+        <p>장교공영주식회사가 직접 운영하며 관리단 정기집회와 재무제표를 매년 공개합니다. 투명한 관리가 자산 가치를 지킵니다.</p></div>
+      <div class="card"><div class="ic">04</div><h4>지하 상가 편의시설</h4>
+        <p>식당·카페·은행·편의점 등 지하 상가 인프라를 갖춰 별도 외출 없이 업무 환경이 완결됩니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="lease" style="background:var(--bg)">
+  <div class="wrap">
+    <div class="sec-t"><div class="eb">LEASE</div><h2>실시간 공실 현황</h2>
+      <p>관리사무소에서 직접 갱신합니다. 최종 갱신: 2026-07-20</p></div>
+    <table>
+      <thead><tr><th style="width:80px">층</th><th>호실</th><th>전용면적</th><th>용도 추천</th><th>상태</th><th style="width:130px">문의</th></tr></thead>
+      <tbody>
+        <tr><td><b>12F</b></td><td>1201호</td><td>82.6㎡ (25평)</td><td>중소 사무실</td><td><span class="pill p-ok">즉시 입주</span></td><td><button class="btn-s" onclick="scrollTo2('leaseform')">문의하기</button></td></tr>
+        <tr><td><b>9F</b></td><td>905호</td><td>141.3㎡ (43평)</td><td>노무·법무 법인</td><td><span class="pill p-ok">즉시 입주</span></td><td><button class="btn-s" onclick="scrollTo2('leaseform')">문의하기</button></td></tr>
+        <tr><td><b>7F</b></td><td>701~702호</td><td>264.5㎡ (80평)</td><td>본사 사무실</td><td><span class="pill p-warn">9월 예정</span></td><td><button class="btn-s" onclick="scrollTo2('leaseform')">문의하기</button></td></tr>
+        <tr><td><b>B1</b></td><td>지하상가 14호</td><td>33.0㎡ (10평)</td><td>식음·리테일</td><td><span class="pill p-ok">즉시 입주</span></td><td><button class="btn-s" onclick="scrollTo2('leaseform')">문의하기</button></td></tr>
+        <tr><td><b>5F</b></td><td>508호</td><td>49.5㎡ (15평)</td><td>1인·소규모</td><td><span class="pill p-gray">계약 협의중</span></td><td><button class="btn-gs">마감 임박</button></td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:13px;color:var(--gray);margin-top:12px">※ 보증금·임대료·관리비는 호실 및 계약 조건에 따라 상이합니다. 문의 시 상세 견적을 안내해 드립니다.</p>
+
+    <div class="grid2" style="margin-top:44px" id="leaseform">
+      <div>
+        <div class="sec-t" style="margin-bottom:20px"><h2 style="font-size:25px">임대 문의</h2>
+          <p>남겨주시면 관리사무소에서 영업일 기준 1일 이내 연락드립니다.</p></div>
+        <div class="panel" style="border-color:var(--brand)">
+          <h3>관리사무소 직통</h3>
+          <p style="font-size:14.5px;color:var(--gray);margin-top:8px;line-height:2">
+            TEL 02-000-0000<br>평일 09:00 – 18:00 (점심 12:00 – 13:00)<br>
+            서울특별시 중구 삼일대로 363 장교빌딩<br>(구) 서울특별시 중구 장교동 1번지</p>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="two">
+          <div class="fld"><label>회사명 *</label><input placeholder="(주)장교"></div>
+          <div class="fld"><label>담당자명 *</label><input placeholder="홍길동"></div>
+        </div>
+        <div class="two">
+          <div class="fld"><label>연락처 *</label><input placeholder="010-0000-0000"></div>
+          <div class="fld"><label>이메일</label><input placeholder="name@company.com"></div>
+        </div>
+        <div class="two">
+          <div class="fld"><label>희망 면적</label>
+            <select><option>선택</option><option>10~20평</option><option>20~40평</option><option>40~80평</option><option>80평 이상</option><option>지하상가</option></select></div>
+          <div class="fld"><label>입주 희망 시기</label>
+            <select><option>선택</option><option>즉시</option><option>1~3개월 내</option><option>3~6개월 내</option><option>미정</option></select></div>
+        </div>
+        <div class="fld"><label>업종 및 요청사항</label><textarea rows="3" placeholder="예: 노무법인, 직원 12명, 회의실 필요"></textarea></div>
+        <button class="btn btn-b" style="width:100%" onclick="alert('문의가 접수되었습니다.\n관리자 콘솔의 리드 목록으로 자동 등록됩니다.')">문의 접수하기</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="tenants">
+  <div class="wrap">
+    <div class="sec-t"><div class="eb">DIRECTORY</div><h2>입주사 · 지하상가 안내</h2>
+      <p>입주사 홍보를 겸한 층별 안내입니다. 입주사는 로그인 후 직접 정보를 수정할 수 있습니다.</p></div>
+    <div class="tabs">
+      <button class="tab on">전체</button><button class="tab">공공기관</button>
+      <button class="tab">노무·법무</button><button class="tab">일반 기업</button><button class="tab">지하상가</button>
+    </div>
+    <div class="dir">
+      <div class="dir-i"><div class="fl">공공</div><div><h5>서울지방고용노동청</h5><span>민원실 · 근로개선지도과</span></div></div>
+      <div class="dir-i"><div class="fl">공공</div><div><h5>고용노동부 관련 부서</h5><span>업무별 층 안내 참조</span></div></div>
+      <div class="dir-i"><div class="fl">8F</div><div><h5>세명장교 비즈니스센터</h5><span>810호 · 창업컨설팅/비상주사무실</span></div></div>
+      <div class="dir-i"><div class="fl">10F</div><div><h5>OO노무법인</h5><span>노무 자문 · 산업안전</span></div></div>
+      <div class="dir-i"><div class="fl">6F</div><div><h5>OO세무회계사무소</h5><span>기장 · 세무조정</span></div></div>
+      <div class="dir-i"><div class="fl">B1</div><div><h5>지하상가 식음 매장</h5><span>중식 · 한식 · 카페 · 편의점</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="visit" style="background:var(--bg)">
+  <div class="wrap">
+    <div class="sec-t"><div class="eb">VISIT</div><h2>방문객 안내</h2>
+      <p>노동청 민원 방문객이 가장 많이 찾는 정보를 상단에 배치했습니다.</p></div>
+    <div class="grid3">
+      <div class="card"><div class="ic">🚇</div><h4>대중교통</h4>
+        <p>지하철 2·5호선 을지로4가역 도보 3분<br>2호선 을지로입구역 도보 8분<br>간선버스 정류장 건물 앞 위치</p></div>
+      <div class="card"><div class="ic">🅿</div><h4>주차 안내</h4>
+        <p>부설주차장 이용 가능 (유료)<br>민원 방문 시 확인 도장 지참<br>혼잡 시간대 09:30~11:00 참고</p></div>
+      <div class="card"><div class="ic">📋</div><h4>민원 방문 전 확인</h4>
+        <p>노동청 민원실 층 안내<br>필요 서류 사전 준비 목록<br>대기 혼잡도 안내 (평일 오전 집중)</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="news">
+  <div class="wrap">
+    <div class="notice">
+      <div>
+        <div class="nt-h"><h3>공지사항</h3><a>+ 더보기</a></div>
+        <ul class="nt-l">
+          <li><a>2026年 5月 관리비 부과내역</a><span class="d">2026.06.02</span></li>
+          <li><a>지하상가 일괄매각 추진업무 종결 통보</a><span class="d">2026.03.18</span></li>
+          <li><a onclick="needAuth('owner')">2025년도 장교공영주식회사 재무제표<span class="lock">🔒 구분소유자</span></a><span class="d">2026.03.10</span></li>
+          <li><a onclick="needAuth('owner')">2025년도 관리단 정기집회 회의록<span class="lock">🔒 구분소유자</span></a><span class="d">2026.02.24</span></li>
+          <li><a>승강기 정기 점검 일정 안내</a><span class="d">2026.02.05</span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="nt-h"><h3>빌딩 소식 · 보도자료</h3><a>+ 더보기</a></div>
+        <ul class="nt-l">
+          <li><a>지하상가 리뉴얼 오픈 매장 소개</a><span class="d">2026.07.01</span></li>
+          <li><a>입주사 인터뷰 — 을지로에서 10년</a><span class="d">2026.06.12</span></li>
+          <li><a>여름철 냉방 운영 시간 안내</a><span class="d">2026.06.01</span></li>
+          <li><a>건물 외벽 정비 공사 완료</a><span class="d">2026.05.20</span></li>
+          <li><a>장교빌딩 주변 맛집 지도 배포</a><span class="d">2026.05.02</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="gate" style="margin-top:44px">
+      <div><h3>입주자 · 구분소유자이신가요?</h3>
+        <p>관리비 내역 조회, 민원 접수, 관리단 안건 사전투표는 로그인 후 이용하실 수 있습니다.</p></div>
+      <button class="btn btn-p" onclick="openLogin()">로그인하고 입주자마당 가기</button>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ================= ② 입주자마당 (로그인 필요) ================= -->
+<div class="view" id="v-mem">
+<div class="dash">
+<div class="wrap">
+  <div class="dash-hd">
+    <div><h2>입주자마당</h2><p id="mem-sub">—</p></div>
+    <div><button class="btn-gs">내 정보 수정</button> <button class="btn-s">관리사무소 문의</button></div>
+  </div>
+
+  <div class="kpi">
+    <div class="kpi-c"><div class="lb">이번 달 관리비</div><div class="vl" id="m-fee">—</div>
+      <div class="dt"><span class="pill p-warn">납부 기한 7/31</span></div></div>
+    <div class="kpi-c"><div class="lb">전월 대비</div><div class="vl down">+6.2%</div>
+      <div class="dt" style="color:var(--gray)">냉방 가동으로 전력비 증가</div></div>
+    <div class="kpi-c"><div class="lb">내 민원 처리현황</div><div class="vl">2<span style="font-size:15px">건 진행중</span></div>
+      <div class="dt" style="color:var(--gray)">총 5건 접수 · 3건 완료</div></div>
+    <div class="kpi-c" id="k-vote"><div class="lb">진행중 투표</div><div class="vl">1<span style="font-size:15px">건</span></div>
+      <div class="dt"><span class="pill p-bad">마감 3일 전</span></div></div>
+  </div>
+
+  <div class="grid2">
+    <div>
+      <!-- 구분소유자 전용: 투표 -->
+      <div class="panel" id="pnl-vote">
+        <div class="ph"><div><h3>관리단 안건 사전투표</h3><p>정기집회 전 온라인으로 의견을 미리 모읍니다.</p></div>
+          <span class="pill p-blue">구분소유자 전용</span></div>
+        <div class="vote">
+          <div class="vh"><h4>제2안건 — 지하상가 리뉴얼 공사비 집행의 건</h4><span class="pill p-warn">진행중</span></div>
+          <div class="meta">투표기간 2026.07.14 ~ 07.24 · 지분 기준 참여율 <b>61.4%</b> · 의결정족수 75%</div>
+          <div class="vopt"><button class="btn-s" onclick="vote('찬성')">찬성</button>
+            <div class="t"><div class="f" style="width:68%"></div><span class="lbl">원안대로 집행</span><span class="pct">68%</span></div></div>
+          <div class="vopt"><button class="btn-gs" onclick="vote('반대')">반대</button>
+            <div class="t"><div class="f" style="width:19%"></div><span class="lbl">집행 반대</span><span class="pct">19%</span></div></div>
+          <div class="vopt"><button class="btn-gs" onclick="vote('보류')">보류</button>
+            <div class="t"><div class="f" style="width:13%"></div><span class="lbl">추가 검토 요청</span><span class="pct">13%</span></div></div>
+          <p style="font-size:12.5px;color:var(--gray);margin-top:12px">※ 온라인 사전투표는 정기집회 의결의 참고자료이며, 서면결의서 제출로 전환할 수 있습니다.</p>
+        </div>
+      </div>
+
+      <!-- 임차인에게 보이는 안내 -->
+      <div class="panel hide" id="pnl-vote-denied">
+        <div class="denied">
+          <div class="i">🔒</div>
+          <div><h4>관리단 안건 투표는 구분소유자 전용입니다</h4>
+            <p>집합건물법상 관리단 의결권은 구분소유자에게 있습니다. 임차인은 아래 설문과 건의·민원 기능을 이용해 의견을 전달하실 수 있습니다.<br>
+            소유자 명의 변경이 필요하시면 관리사무소로 문의해 주세요.</p></div>
+        </div>
+      </div>
+
+      <!-- 전체 공통: 설문 -->
+      <div class="panel">
+        <div class="ph"><div><h3>입주자 설문</h3><p>임차인·구분소유자 누구나 참여할 수 있습니다.</p></div>
+          <span class="pill p-ok">전체 참여</span></div>
+        <div class="vote">
+          <div class="vh"><h4>여름철 냉방 운영시간 만족도 설문</h4><span class="pill p-blue">진행중</span></div>
+          <div class="meta">응답 84명 · 마감 2026.07.31</div>
+          <button class="btn-s" onclick="alert('설문 참여 화면으로 이동합니다.')">설문 참여하기</button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="ph"><div><h3>건의 · 민원 접수 현황</h3><p>접수부터 처리 완료까지 전 과정이 공개됩니다.</p></div>
+          <button class="btn-s" onclick="alert('민원 접수 화면으로 이동합니다.')">새 민원 접수</button></div>
+        <div class="tabs">
+          <button class="tab on">전체 42</button><button class="tab">접수 5</button>
+          <button class="tab">처리중 9</button><button class="tab">완료 28</button></div>
+        <table>
+          <thead><tr><th>구분</th><th>제목</th><th>접수일</th><th>상태</th></tr></thead>
+          <tbody>
+            <tr><td>시설</td><td>9층 남자화장실 온수 미공급</td><td>07.19</td><td><span class="pill p-warn">처리중</span></td></tr>
+            <tr><td>주차</td><td>지상 주차 구획선 재도색 요청</td><td>07.15</td><td><span class="pill p-blue">접수</span></td></tr>
+            <tr><td>공용</td><td>지하 1층 야간 조명 개선</td><td>07.08</td><td><span class="pill p-ok">완료</span></td></tr>
+            <tr><td>승강기</td><td>2호기 소음 점검 요청</td><td>07.02</td><td><span class="pill p-ok">완료</span></td></tr>
+            <tr><td>보안</td><td>야간 출입 카드 인식 오류</td><td>06.28</td><td><span class="pill p-ok">완료</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div>
+      <div class="panel">
+        <div class="ph"><div><h3>관리비 상세 · 6개월 추이</h3><p id="m-unit">—</p></div>
+          <button class="btn-gs">고지서 PDF</button></div>
+        <div class="bars">
+          <div class="bar-w"><div class="bar" style="height:52%"><span>108</span></div><span class="xl">2월</span></div>
+          <div class="bar-w"><div class="bar" style="height:48%"><span>102</span></div><span class="xl">3월</span></div>
+          <div class="bar-w"><div class="bar" style="height:41%"><span>94</span></div><span class="xl">4월</span></div>
+          <div class="bar-w"><div class="bar" style="height:46%"><span>99</span></div><span class="xl">5월</span></div>
+          <div class="bar-w"><div class="bar" style="height:56%"><span>121</span></div><span class="xl">6월</span></div>
+          <div class="bar-w"><div class="bar" style="height:64%;background:linear-gradient(180deg,var(--point),#a5830f)"><span>128</span></div><span class="xl">7월</span></div>
+        </div>
+        <p style="font-size:12.5px;color:var(--gray);margin-top:8px">단위: 만원 · 공용관리비 + 전용부 사용료 합산</p>
+        <div style="margin-top:20px">
+          <div class="hb"><div class="r"><span>일반관리비</span><b>412,000원</b></div><div class="t"><div class="f" style="width:32%"></div></div></div>
+          <div class="hb"><div class="r"><span>전기료 (냉방 포함)</span><b>498,600원</b></div><div class="t"><div class="f o" style="width:39%"></div></div></div>
+          <div class="hb"><div class="r"><span>청소·경비</span><b>241,000원</b></div><div class="t"><div class="f g" style="width:19%"></div></div></div>
+          <div class="hb"><div class="r"><span>수도·기타</span><b>133,000원</b></div><div class="t"><div class="f y" style="width:10%"></div></div></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="ph"><div><h3>자료실</h3><p id="doc-note">—</p></div></div>
+        <ul class="nt-l" id="doclist"></ul>
+      </div>
+
+      <div class="panel">
+        <div class="ph"><div><h3>공용시설 예약</h3><p>회의실 · 주차 · 이사 승강기</p></div>
+          <button class="btn-s" onclick="alert('예약 화면으로 이동합니다.')">예약하기</button></div>
+        <table>
+          <thead><tr><th>시설</th><th>일시</th><th>상태</th></tr></thead>
+          <tbody>
+            <tr><td>대회의실 (지하 1층)</td><td>07.23 (목) 14:00~16:00</td><td><span class="pill p-ok">예약 확정</span></td></tr>
+            <tr><td>화물 승강기</td><td>07.28 (화) 09:00~12:00</td><td><span class="pill p-warn">승인 대기</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- ================= ③ 관리자 콘솔 ================= -->
+<div class="view" id="v-adm">
+<div class="dash">
+<div class="wrap">
+  <div class="dash-hd">
+    <div><h2>운영 대시보드</h2><p>2026년 7월 21일 기준 · 매일 06:00 자동 집계</p></div>
+    <div><button class="btn-gs">기간 설정</button> <button class="btn-s">월간 보고서 생성</button></div>
+  </div>
+
+  <div class="kpi">
+    <div class="kpi-c"><div class="lb">임대율</div><div class="vl">88.4<span style="font-size:16px">%</span></div>
+      <div class="dt up">▲ 2.1%p (전월 대비)</div></div>
+    <div class="kpi-c"><div class="lb">관리비 수납률</div><div class="vl">94.7<span style="font-size:16px">%</span></div>
+      <div class="dt down">▼ 1.3%p · 미납 6건</div></div>
+    <div class="kpi-c"><div class="lb">이번 달 임대 문의</div><div class="vl">17<span style="font-size:16px">건</span></div>
+      <div class="dt up">▲ 6건 · 홈페이지 유입 11건</div></div>
+    <div class="kpi-c"><div class="lb">민원 평균 처리일</div><div class="vl">3.2<span style="font-size:16px">일</span></div>
+      <div class="dt up">▲ 0.8일 단축</div></div>
+  </div>
+
+  <div class="grid2">
+    <div class="panel">
+      <div class="ph"><div><h3>공실 및 임대 현황</h3><p>전체 임대면적 기준</p></div></div>
+      <div class="donut-wrap">
+        <div class="donut"><div class="ct"><b>88.4%</b><span>임대율</span></div></div>
+        <ul class="lg">
+          <li><i style="background:var(--accent)"></i>임대중 · 74개 호실 (74%)</li>
+          <li><i style="background:var(--point)"></i>계약 협의중 · 14개 호실 (14%)</li>
+          <li><i style="background:#dfe5eb"></i>공실 · 12개 호실 (12%)</li>
+        </ul>
+      </div>
+      <div style="margin-top:22px">
+        <div class="hb"><div class="r"><span>사무 층 (3F~15F)</span><b>91.2%</b></div><div class="t"><div class="f g" style="width:91%"></div></div></div>
+        <div class="hb"><div class="r"><span>저층부 (1F~2F)</span><b>100%</b></div><div class="t"><div class="f g" style="width:100%"></div></div></div>
+        <div class="hb"><div class="r"><span>지하상가 (B1)</span><b>62.5%</b></div><div class="t"><div class="f o" style="width:62%"></div></div></div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="ph"><div><h3>홈페이지 유입 → 문의 전환</h3><p>최근 6개월</p></div><button class="btn-gs">채널별 보기</button></div>
+      <div class="bars">
+        <div class="bar-w"><div class="bar" style="height:34%"><span>6</span></div><span class="xl">2월</span></div>
+        <div class="bar-w"><div class="bar" style="height:41%"><span>8</span></div><span class="xl">3월</span></div>
+        <div class="bar-w"><div class="bar" style="height:52%"><span>9</span></div><span class="xl">4월</span></div>
+        <div class="bar-w"><div class="bar" style="height:47%"><span>7</span></div><span class="xl">5월</span></div>
+        <div class="bar-w"><div class="bar" style="height:66%"><span>11</span></div><span class="xl">6월</span></div>
+        <div class="bar-w"><div class="bar" style="height:88%;background:linear-gradient(180deg,var(--point),#a5830f)"><span>17</span></div><span class="xl">7월</span></div>
+      </div>
+      <p style="font-size:12.5px;color:var(--gray);margin-top:8px">단위: 임대 문의 건수 · 7월 급증 원인은 지하상가 리뉴얼 보도자료 노출</p>
+      <div style="margin-top:20px">
+        <div class="hb"><div class="r"><span>네이버 검색 "을지로 사무실 임대"</span><b>41%</b></div><div class="t"><div class="f" style="width:41%"></div></div></div>
+        <div class="hb"><div class="r"><span>직접 유입 (jangkyo.co.kr)</span><b>28%</b></div><div class="t"><div class="f" style="width:28%"></div></div></div>
+        <div class="hb"><div class="r"><span>부동산 중개 플랫폼</span><b>19%</b></div><div class="t"><div class="f" style="width:19%"></div></div></div>
+        <div class="hb"><div class="r"><span>기타·소개</span><b>12%</b></div><div class="t"><div class="f" style="width:12%"></div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="ph"><div><h3>임대 문의 리드 관리</h3><p>홈페이지 문의 폼이 자동으로 등록됩니다.</p></div>
+      <div><button class="btn-gs">엑셀 내보내기</button> <button class="btn-s">문자 일괄 발송</button></div></div>
+    <table>
+      <thead><tr><th>접수일</th><th>회사명</th><th>희망 면적</th><th>입주 시기</th><th>유입 경로</th><th>진행 상태</th><th>담당</th></tr></thead>
+      <tbody>
+        <tr><td>07.20</td><td>OO노무법인</td><td>40~80평</td><td>3개월 내</td><td>네이버 검색</td><td><span class="pill p-blue">신규</span></td><td>관리소장</td></tr>
+        <tr><td>07.18</td><td>(주)OO테크</td><td>20~40평</td><td>즉시</td><td>직접 유입</td><td><span class="pill p-warn">현장 방문 예정</span></td><td>임대팀</td></tr>
+        <tr><td>07.15</td><td>OO세무회계</td><td>10~20평</td><td>1~3개월</td><td>중개 플랫폼</td><td><span class="pill p-warn">조건 협의</span></td><td>임대팀</td></tr>
+        <tr><td>07.11</td><td>OO커피 (B1)</td><td>지하상가</td><td>즉시</td><td>보도자료</td><td><span class="pill p-ok">계약 완료</span></td><td>관리소장</td></tr>
+        <tr><td>07.06</td><td>개인 (프리랜서)</td><td>10~20평</td><td>미정</td><td>네이버 검색</td><td><span class="pill p-gray">보류</span></td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="grid2">
+    <div class="panel">
+      <div class="ph"><div><h3>민원 처리 분석</h3><p>최근 90일 · 총 42건</p></div></div>
+      <div class="hb"><div class="r"><span>시설·설비</span><b>16건 (38%)</b></div><div class="t"><div class="f o" style="width:38%"></div></div></div>
+      <div class="hb"><div class="r"><span>주차</span><b>9건 (21%)</b></div><div class="t"><div class="f" style="width:21%"></div></div></div>
+      <div class="hb"><div class="r"><span>청소·위생</span><b>7건 (17%)</b></div><div class="t"><div class="f g" style="width:17%"></div></div></div>
+      <div class="hb"><div class="r"><span>승강기</span><b>6건 (14%)</b></div><div class="t"><div class="f y" style="width:14%"></div></div></div>
+      <div class="hb"><div class="r"><span>보안·기타</span><b>4건 (10%)</b></div><div class="t"><div class="f" style="width:10%"></div></div></div>
+      <p style="font-size:13px;color:var(--gray);margin-top:14px;padding-top:14px;border-top:1px solid var(--line)">
+        <b style="color:var(--bad)">경고</b> — 시설·설비 민원이 3개월 연속 1위입니다. 노후 설비 예방 점검 계획 수립을 권장합니다.</p>
+    </div>
+
+    <div class="panel">
+      <div class="ph"><div><h3>참여 현황 모니터링</h3><p>투표·설문 응답률</p></div></div>
+      <table>
+        <thead><tr><th>안건</th><th>대상</th><th>참여율</th><th>상태</th></tr></thead>
+        <tbody>
+          <tr><td>지하상가 공사비 집행</td><td>구분소유자</td><td><b>61.4%</b></td><td><span class="pill p-warn">정족수 미달</span></td></tr>
+          <tr><td>관리규약 일부 개정</td><td>구분소유자</td><td><b>78.9%</b></td><td><span class="pill p-ok">의결</span></td></tr>
+          <tr><td>냉방 운영시간 설문</td><td>전체 입주자</td><td><b>34.2%</b></td><td><span class="pill p-blue">진행중</span></td></tr>
+          <tr><td>주차 배정 방식 개선</td><td>전체 입주자</td><td><b>52.7%</b></td><td><span class="pill p-ok">종료</span></td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:13px;color:var(--gray);margin-top:14px;padding-top:14px;border-top:1px solid var(--line)">
+        <b style="color:var(--warn)">알림</b> — 진행중 안건 참여율이 정족수(75%)에 미달합니다. 미참여 구분소유자 38명에게 문자 발송을 권장합니다.
+        <button class="btn-s" style="margin-left:8px" onclick="alert('미참여 구분소유자 38명에게 안내 문자를 발송합니다.')">미참여자 문자 발송</button></p>
+    </div>
+
+    <div class="panel">
+      <div class="ph"><div><h3>회원 권한 관리</h3><p>가입 승인 및 권한 부여</p></div>
+        <button class="btn-s">신규 승인 대기 3건</button></div>
+      <table>
+        <thead><tr><th>아이디</th><th>성명</th><th>호실</th><th>신청 권한</th><th>처리</th></tr></thead>
+        <tbody>
+          <tr><td>kim***</td><td>김OO</td><td>12F 1201호</td><td><span class="pill p-gray">입주자(임차인)</span></td><td><button class="btn-s">승인</button> <button class="btn-gs">반려</button></td></tr>
+          <tr><td>lee***</td><td>이OO</td><td>9F 905호</td><td><span class="pill p-blue">구분소유자</span></td><td><button class="btn-s">승인</button> <button class="btn-gs">반려</button></td></tr>
+          <tr><td>park***</td><td>박OO</td><td>B1 상가 7호</td><td><span class="pill p-gray">입주자(임차인)</span></td><td><button class="btn-s">승인</button> <button class="btn-gs">반려</button></td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:12.5px;color:var(--gray);margin-top:12px">※ 구분소유자 권한은 등기부등본 확인 후 부여됩니다. 의결권 지분율이 함께 등록됩니다.</p>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <div><h5>장교빌딩 관리사무소</h5>
+        <p style="line-height:1.9">서울특별시 중구 삼일대로 363<br>(구) 서울특별시 중구 장교동 1번지<br>
+        운영 장교공영주식회사 · 장교빌딩 관리단<br>TEL 02-000-0000</p></div>
+      <div><h5>일반 안내</h5><ul>
+        <li><a onclick="go('pub');scrollTo2('intro')">빌딩 소개</a></li><li><a onclick="go('pub');scrollTo2('lease')">임대 안내</a></li>
+        <li><a onclick="go('pub');scrollTo2('tenants')">입주사 안내</a></li><li><a onclick="go('pub');scrollTo2('visit')">오시는 길</a></li></ul></div>
+      <div><h5>입주자마당</h5><ul>
+        <li><a onclick="needAuth('member')">관리비 조회</a></li><li><a onclick="needAuth('member')">건의·민원</a></li>
+        <li><a onclick="needAuth('owner')">투표 (구분소유자)</a></li><li><a onclick="needAuth('member')">자료실</a></li></ul></div>
+      <div><h5>고객지원</h5><ul>
+        <li><a onclick="go('pub');scrollTo2('news')">공지사항</a></li><li><a>FAQ</a></li>
+        <li><a>개인정보처리방침</a></li><li><a>이용약관</a></li></ul></div>
+    </div>
+    <div class="f-bot">
+      <span>© 2026 JANGKYO BUILDING. All rights reserved.</span>
+      <span>본 사이트는 HTTPS 보안 연결로 제공됩니다.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= 로그인 모달 ================= -->
+<div class="mask" id="mask">
+  <div class="modal">
+    <div class="mh">
+      <button class="mclose" onclick="closeLogin()">×</button>
+      <h3>장교빌딩 통합 로그인</h3>
+      <p>권한에 따라 이용 가능한 화면으로 자동 이동합니다.</p>
+    </div>
+    <div class="mb">
+      <div class="err" id="err">아이디 또는 비밀번호가 일치하지 않습니다.</div>
+      <div class="fld"><label>아이디</label><input id="lid" placeholder="아이디를 입력하세요" onkeydown="if(event.key==='Enter')doLogin()"></div>
+      <div class="fld"><label>비밀번호</label><input id="lpw" type="password" placeholder="비밀번호를 입력하세요" onkeydown="if(event.key==='Enter')doLogin()"></div>
+      <button class="btn btn-b" style="width:100%" onclick="doLogin()">로그인</button>
+      <div class="accts">
+        <div class="t">시연용 계정 — 클릭하면 자동 입력됩니다 (비밀번호 모두 1234)</div>
+        <div class="acct" onclick="fill('tenant1')"><span><b>입주자 (임차인)</b> · 12F 1201호</span><span class="id">tenant1</span></div>
+        <div class="acct" onclick="fill('owner1')"><span><b>구분소유자</b> · 9F 905호</span><span class="id">owner1</span></div>
+        <div class="acct" onclick="fill('admin')"><span><b>관리자</b> · 장교공영㈜ 관리소장</span><span class="id">admin</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ---------- 계정 (실제 서비스에서는 서버 세션·DB로 처리) ---------- */
+var USERS={
+  tenant1:{pw:'1234',name:'김민수',role:'tenant',roleLabel:'입주자(임차인)',
+    unit:'12F 1201호 · 임차인',fee:'842,300원',feeUnit:'1201호 (82.6㎡)'},
+  owner1 :{pw:'1234',name:'이정한',role:'owner',roleLabel:'구분소유자',
+    unit:'9F 905호 · 구분소유자 (지분 2.14%)',fee:'1,284,600원',feeUnit:'905호 (141.3㎡)'},
+  admin  :{pw:'1234',name:'박성호',role:'admin',roleLabel:'최고관리자',
+    unit:'장교공영주식회사 · 관리소장',fee:'—',feeUnit:'—'}
+};
+var state={user:null};
+
+/* ---------- 권한 정의 ---------- */
+var NAV={
+  guest:[['빌딩소개','pub#intro'],['임대안내','pub#lease'],['입주사 안내','pub#tenants'],['방문객 안내','pub#visit'],['공지·정보','pub#news']],
+  tenant:[['입주자마당','mem'],['관리비','mem'],['건의·민원','mem'],['설문','mem'],['시설예약','mem'],['빌딩 홈','pub']],
+  owner:[['입주자마당','mem'],['관리비','mem'],['건의·민원','mem'],['투표·설문','mem'],['자료실','mem'],['빌딩 홈','pub']],
+  admin:[['대시보드','adm'],['임대·리드','adm'],['관리비','adm'],['민원','adm'],['투표','adm'],['회원관리','adm'],['빌딩 홈','pub']]
+};
+var DOCS={
+  tenant:[['입주자 생활 안내문','PDF · 420KB'],['관리규약 (2024 개정본)','PDF · 660KB'],
+          ['공용시설 이용 수칙','PDF · 310KB']],
+  owner:[['2025년도 장교공영주식회사 재무제표','PDF · 2.1MB'],['2025년도 관리단 정기집회 회의록','PDF · 840KB'],
+         ['2026년 관리비 예산안','XLSX · 320KB'],['지하상가 매각 추진 경과 보고서','PDF · 1.4MB'],
+         ['관리규약 (2024 개정본)','PDF · 660KB']]
+};
+
+/* ---------- 화면 전환 (권한 검사 포함) ---------- */
+function go(v,anchor){
+  if(v==='mem' && !state.user){ return needAuth('member'); }
+  if(v==='adm' && (!state.user || state.user.role!=='admin')){ return needAuth('admin'); }
+  document.querySelectorAll('.view').forEach(function(e){e.classList.remove('on')});
+  document.getElementById('v-'+v).classList.add('on');
+  if(anchor){ setTimeout(function(){scrollTo2(anchor)},60); }
+  else { window.scrollTo({top:0,behavior:'smooth'}); }
+}
+function scrollTo2(id){
+  var t=document.getElementById(id); if(!t)return;
+  window.scrollTo({top:t.offsetTop-90,behavior:'smooth'});
+}
+
+/* ---------- 접근 제어 ---------- */
+function needAuth(level){
+  if(!state.user){
+    alert('로그인이 필요한 메뉴입니다.\n입주자 · 구분소유자 · 관리자 계정으로 로그인해 주세요.');
+    return openLogin();
+  }
+  if(level==='owner' && state.user.role==='tenant'){
+    return alert('구분소유자 전용 메뉴입니다.\n\n집합건물법상 관리단 의결권과 재무 자료 열람권은 구분소유자에게 있습니다.\n권한 변경이 필요하시면 관리사무소로 문의해 주세요.');
+  }
+  if(level==='admin' && state.user.role!=='admin'){
+    return alert('관리자 전용 메뉴입니다. 접근 권한이 없습니다.');
+  }
+  if(level==='admin') return go('adm');
+  return go('mem');
+}
+
+/* ---------- 로그인 ---------- */
+function openLogin(){ document.getElementById('mask').classList.add('on'); document.getElementById('err').classList.remove('on'); setTimeout(function(){document.getElementById('lid').focus()},80); }
+function closeLogin(){ document.getElementById('mask').classList.remove('on'); }
+function fill(id){ document.getElementById('lid').value=id; document.getElementById('lpw').value='1234'; }
+function doLogin(){
+  var id=document.getElementById('lid').value.trim(), pw=document.getElementById('lpw').value;
+  var u=USERS[id];
+  if(!u || u.pw!==pw){ document.getElementById('err').classList.add('on'); return; }
+  state.user=Object.assign({id:id},u);
+  closeLogin();
+  render();
+  /* 권한에 따른 자동 분기 */
+  go(u.role==='admin' ? 'adm' : 'mem');
+}
+function logout(){
+  if(!confirm('로그아웃 하시겠습니까?'))return;
+  state.user=null; render(); go('pub');
+}
+
+/* ---------- 로그인 상태에 따른 UI 렌더링 ---------- */
+function render(){
+  var u=state.user;
+  var nav=document.getElementById('mainnav');
+  var hd=document.getElementById('hd-r');
+  var tbL=document.getElementById('tb-left');
+  var tbR=document.getElementById('tb-right');
+  var sub=document.getElementById('logo-sub');
+
+  var items=NAV[u?u.role:'guest'];
+  nav.innerHTML=items.map(function(it){
+    var p=it[1].split('#');
+    return '<li><a onclick="go(\''+p[0]+'\''+(p[1]?',\''+p[1]+'\'':'')+')">'+it[0]+'</a></li>';
+  }).join('');
+
+  if(!u){
+    sub.textContent='JANGKYO BUILDING';
+    tbL.textContent='장교공영주식회사 · 장교빌딩 관리단';
+    tbR.innerHTML='<a onclick="go(\'pub\')">홈</a><a>사이트맵</a><a onclick="openLogin()">로그인</a><a>회원가입</a>';
+    hd.innerHTML='<button class="btn-gs" onclick="openLogin()">입주자 로그인</button>'+
+                 '<button class="btn btn-b" style="padding:11px 20px;font-size:14px" onclick="go(\'pub\',\'leaseform\')">임대 문의</button>';
+  }else{
+    sub.textContent = u.role==='admin' ? 'ADMIN CONSOLE' : 'MEMBER LOUNGE';
+    tbL.textContent = u.role==='admin' ? '관리자 콘솔 · 장교공영주식회사' : '입주자마당 · 로그인됨';
+    tbR.innerHTML='<a onclick="go(\'pub\')">빌딩 홈</a><a>내 정보</a><a onclick="logout()">로그아웃</a>';
+    var badge = u.role==='admin' ? '<span class="pill p-bad">최고관리자</span>'
+              : u.role==='owner' ? '<span class="pill p-blue">구분소유자</span>'
+              : '<span class="pill p-gray">입주자</span>';
+    hd.innerHTML='<div class="usr"><b>'+u.name+' 님</b>'+u.unit+'</div>'+badge+
+                 '<button class="btn-gs" onclick="logout()">로그아웃</button>';
+  }
+
+  /* 입주자마당 내부 권한 분기 */
+  if(u && u.role!=='admin'){
+    document.getElementById('mem-sub').textContent =
+      '2026년 7월 21일 화요일 · '+u.unit+' · 확인하지 않은 알림 3건';
+    document.getElementById('m-fee').innerHTML = u.fee;
+    document.getElementById('m-unit').textContent = u.feeUnit;
+
+    var isOwner = (u.role==='owner');
+    document.getElementById('pnl-vote').classList.toggle('hide',!isOwner);
+    document.getElementById('pnl-vote-denied').classList.toggle('hide',isOwner);
+    document.getElementById('k-vote').classList.toggle('hide',!isOwner);
+
+    var docs = isOwner ? DOCS.owner : DOCS.tenant;
+    document.getElementById('doc-note').textContent =
+      isOwner ? '구분소유자 권한으로 재무·의결 자료까지 열람할 수 있습니다.'
+              : '입주자(임차인) 권한으로 열람 가능한 문서입니다.';
+    document.getElementById('doclist').innerHTML = docs.map(function(d){
+      return '<li><a>'+d[0]+'</a><span class="d">'+d[1]+'</span></li>';
+    }).join('');
+  }
+}
+function vote(v){ alert('"'+v+'"으로 투표가 접수되었습니다.\n\n의결권 지분 2.14%가 반영되며, 투표 마감 전까지 변경하실 수 있습니다.'); }
+
+/* 탭 */
+document.querySelectorAll('.tabs').forEach(function(g){
+  g.querySelectorAll('.tab').forEach(function(t){
+    t.addEventListener('click',function(){
+      g.querySelectorAll('.tab').forEach(function(x){x.classList.remove('on')});
+      t.classList.add('on');
+    });
+  });
+});
+document.getElementById('mask').addEventListener('click',function(e){ if(e.target===this) closeLogin(); });
+document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeLogin(); });
+
+render();
+</script>
+</body>
+</html>
